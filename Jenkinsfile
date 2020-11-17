@@ -3,7 +3,7 @@ pipeline{
       agent {
                 docker {
                 image 'maven'
-                args '-v $HOME/.m2:/root/.m2' -v $pwd/settings.xml:/usr/share/maven/ref/settings.xml:ro'
+                args '-v $HOME/.m2:/root/.m2' -v /home/docker_apps/abc/settings.xml:/usr/share/maven/ref/settings.xml:ro'
 		echo '$HOME/.m2:/root/.m2'
                 }
             }
